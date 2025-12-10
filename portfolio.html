@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>기획자 김필립 | 포트폴리오</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">Game Designer <span>Philip Kim</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="career.html">경력 기술서</a>
+        <a href="portfolio.html" class="active">포트폴리오</a>
+        <a href="about.html">자기소개서</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="section-title">포트폴리오</h1>
+        <p class="section-subtitle">
+          실제 프로젝트에서 진행한 전투 및 시스템 기획 작업 중, 공개 가능한 범위 내에서 선별하여 정리한 페이지입니다.
+          (링크/이미지/문서 등은 차후 업데이트 예정)
+        </p>
+
+        <!-- 예시 카드 1 -->
+        <article class="card">
+          <div class="card-title">MMORPG 전투 시스템 구조 기획 문서</div>
+          <div class="card-meta">
+            스킬 구조 · 상태이상 · 어그로 · 자동 전투 · 탈것/비행
+          </div>
+          <div class="card-body">
+            <p>
+              메인 전투 시스템의 전반적인 구조를 정리한 기획 문서입니다.<br />
+              스킬 데이터 구조, 상태이상 처리 플로우, 어그로 공식, 자동 전투 로직, 탈것 및 비행 시스템과의 연계를 포함하고 있습니다.
+            </p>
+            <ul>
+              <li>스킬/상태이상 데이터 테이블 설계</li>
+              <li>전투 흐름 다이어그램 및 예외 케이스 정리</li>
+              <li>UE5 연동(블루프린트/몽타주/나이아가라/사운드) 관점 포함</li>
+            </ul>
+            <!-- 실제로는 <a href="..." target="_blank">문서 보기</a> 등 링크 추가 -->
+          </div>
+        </article>
+
+        <!-- 예시 카드 2 -->
+        <article class="card">
+          <div class="card-title">보스 몬스터 패턴 및 상태머신 설계</div>
+          <div class="card-meta">
+            Boss AI · State Machine · Phase 설계
+          </div>
+          <div class="card-body">
+            <p>
+              보스 몬스터의 페이즈 전환, 패턴 구성, 예고 연출 등 전투 경험을 설계한 문서입니다.
+            </p>
+            <ul>
+              <li>상태머신 기반 보스 행동 설계</li>
+              <li>Phase별 패턴 구성 및 난이도 곡선 조정</li>
+              <li>장판/경고 이펙트, 연출 타이밍 기획</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 필요할 때 계속 추가 -->
+      </section>
+
+      <footer>
+        © <span id="year"></span> Philip Kim. All rights reserved.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

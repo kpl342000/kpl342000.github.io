@@ -1,0 +1,280 @@
+/* 전체 페이지 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+/* ----- HEADER ----- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #ffffff;
+  border-color: #94a3b8;
+}
+
+nav .active {
+  border: 1px solid #38bdf8;
+  color: #fff;
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* ----- HERO 영역 ----- */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: rgba(148, 163, 184, 0.2);
+  color: #cbd5e1;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 20px;
+  color: #f1f5f9;
+}
+
+.hero-title span {
+  color: #38bdf8;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+/* Profile Card */
+.hero-card {
+  width: 360px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+/* 프로필 사진 + 상단 정보 */
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.8);
+}
+
+/* 카드 내부 텍스트 */
+.hero-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.hero-card-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2px;
+  color: #f1f5f9;
+}
+
+.hero-meta {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.label {
+  font-weight: 600;
+  color: #94a3b8;
+  margin-right: 4px;
+}
+
+.hero-highlight {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #e2e8f0;
+}
+
+/* ----- SECTION TITLE ----- */
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #f1f5f9;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 26px;
+}
+
+/* ----- KEY CONTENTS 이미지 카드 ----- */
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.nav-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 320px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  color: #f9fafb;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.85);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.9),
+    rgba(15, 23, 42, 0.6),
+    rgba(15, 23, 42, 0.2)
+  );
+  transition: 0.25s ease;
+}
+
+.nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.95);
+  border-color: #38bdf8;
+}
+
+.nav-card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 1),
+    rgba(15, 23, 42, 0.7),
+    rgba(15, 23, 42, 0.25)
+  );
+}
+
+.nav-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.nav-card-subtitle {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.nav-card-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(249, 250, 251, 0.7);
+  color: #f9fafb;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+  margin-top: 80px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ----- 반응형 ----- */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+}

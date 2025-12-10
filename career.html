@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>기획자 김필립 | 경력 기술서</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">Game Designer <span>Philip Kim</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="career.html" class="active">경력 기술서</a>
+        <a href="portfolio.html">포트폴리오</a>
+        <a href="about.html">자기소개서</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="section-title">경력 기술서</h1>
+        <p class="section-subtitle">
+          MMORPG 전투 및 시스템 기획을 중심으로 한 실무 경험을 정리한 페이지입니다.
+        </p>
+
+        <!-- 프로젝트 / 회사 단위로 카드 나누기 -->
+        <article class="card">
+          <div class="card-title">MMORPG 프로젝트 전투 및 시스템 기획</div>
+          <div class="card-meta">
+            언리얼 엔진 5 · 전투/시스템 기획 · 메인 클래스 & 몬스터/보스 설계
+          </div>
+          <div class="card-body">
+            <strong>주요 역할</strong>
+            <ul>
+              <li>메인 캐릭터 4개 클래스(나이트, 위자드, 아처, 어쌔신) 스킬 및 전투 구조 기획</li>
+              <li>보스 몬스터 패턴 및 상태머신 기반 전투 흐름 설계</li>
+              <li>스킬/상태이상/어그로/자동 전투/탈것·비행 시스템 등 핵심 전투 시스템 기획</li>
+              <li>언리얼 엔진 5(블루프린트, 몽타주, 나이아가라, 사운드)와 연동되는 데이터 파이프라인 구축</li>
+            </ul>
+
+            <br />
+            <strong>전투 시스템 기획</strong>
+            <ul>
+              <li>스킬 예약 시스템(큐 기반) 기획 및 조건/우선순위 설계</li>
+              <li>자동 전투 시스템(스킬 카테고리 및 사용 조건 기반) 기획</li>
+              <li>상태이상 조건에 따른 스킬/커맨드 발동 시스템 기획</li>
+              <li>Z축 시야/사거리 판정, 비행 탈것 전투 관련 공중 시스템 기획</li>
+              <li>어그로 공식 및 어그로 커맨드 처리(대미지/힐/거리/HP/타겟 유지 등) 기획</li>
+            </ul>
+
+            <br />
+            <strong>상태이상 / 스탯 기획</strong>
+            <ul>
+              <li>도발, 암흑, 반사 대미지, 대미지 감소, 대미지 실드, 은신, 석화 등 상태이상 구조 설계</li>
+              <li>상태이상 중첩/갱신/유지 로직 기획 및 관계(시전자/대상자)에 따른 처리 설계</li>
+              <li>추가 사거리, 상태이상 대상 추가 능력치, 마나 감소, 상태이상 시간 증감 스탯 기획</li>
+            </ul>
+
+            <br />
+            <strong>캐릭터 / 몬스터 데이터 작업</strong>
+            <ul>
+              <li>대륙/던전 몬스터 애니메이션(로코 모션, 몽타주) 및 스킬 데이터(사거리, 대미지, 타입) 작업</li>
+              <li>스탯 데이터(베이스 스탯, 이동 속도 등) 및 레벨 배치 작업</li>
+              <li>외형 데이터(크기, 스켈레톤 소켓, 네임 플레이트 위치, 캡슐 사이즈 등) 작업</li>
+            </ul>
+
+            <br />
+            <strong>전투 연출 및 퀄리티 향상</strong>
+            <ul>
+              <li>카메라 쉐이크, 정지 프레임, 히트백 시스템 등 타격감 연출 기획 및 구현</li>
+              <li>애님 노티파이를 통한 이펙트/사운드 연동 구조 설계</li>
+              <li>스킬별 히트 이펙트 분기, 타겟 기반 이펙트 스폰 방식 기획</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 필요하면 추가 프로젝트 / 유니티 스터디 등 카드 더 추가 -->
+        <article class="card">
+          <div class="card-title">Unity 스터디 · 모바일 디펜스 개발 참여</div>
+          <div class="card-meta">
+            Unity · 모바일 디펜스 · 프로토타입 ~ 시스템/전투/밸런스/PM
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>개발 스터디에서 Unity를 활용한 모바일 디펜스 게임 기획 및 개발 참여</li>
+              <li>프로토타입 제작부터 전투 구조, 웨이브/성장 시스템, 밸런스 조정 담당</li>
+              <li>작업 일정 관리 및 커뮤니케이션 등 PM 역할 병행</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Philip Kim. All rights reserved.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
