@@ -1,0 +1,223 @@
+/* ========== 기본 스타일 ========== */
+body {
+  margin: 0;
+  font-family: Pretendard, sans-serif;
+  background: linear-gradient(180deg, #050B18 0%, #0B1222 100%);
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+}
+.logo span {
+  color: #4bb8ff;
+}
+
+nav a {
+  margin-left: 24px;
+  color: #c8d1e0;
+  text-decoration: none;
+  font-size: 16px;
+}
+nav a:hover,
+nav .active {
+  color: white;
+  font-weight: 600;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 40px 0 80px;
+}
+
+.hero-tag {
+  background: rgba(80, 120, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.hero-title span {
+  color: #4bb8ff;
+}
+
+.hero-subtitle {
+  margin-top: 12px;
+  color: #b8c2d8;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* ========== 프로필 카드 ========== */
+.hero-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  width: 360px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+/* 사진 완전 고정 + 절대 안깨짐 */
+.profile-img {
+  width: 100%;
+  height: 380px;   /* 높이 더 키워서 자연스러운 비율 */
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* 카드 텍스트 */
+.hero-card-title {
+  padding: 18px 20px 0;
+  font-size: 14px;
+  color: #7ca4ff;
+}
+
+.hero-card-name {
+  padding: 6px 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.hero-meta {
+  padding: 4px 20px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d0d8e8;
+}
+
+.hero-meta .label {
+  color: #4bb8ff;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.hero-highlight {
+  padding: 0 20px;
+  color: #c4ccdd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========== SECTION TITLE ========== */
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.section-subtitle {
+  color: #b6c2d6;
+  margin-bottom: 32px;
+}
+
+/* ========== KEY CONTENTS 카드 그리드 ========== */
+.key-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+/* 카드 스타일 */
+.key-card {
+  width: 100%;
+  height: 460px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+  cursor: pointer;
+  transition: transform .25s;
+}
+
+.key-card:hover {
+  transform: translateY(-6px);
+}
+
+/* 배경 이미지 */
+.key-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 아래 그라데이션 */
+.key-card-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.85));
+}
+
+/* 카드 텍스트 */
+.key-card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+}
+
+.key-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.key-card-desc {
+  font-size: 14px;
+  color: #d4d7e2;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* 버튼 크게 */
+.key-card-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.9);
+  color: black;
+  font-weight: 600;
+  display: inline-block;
+}
+
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 14px;
+  color: #8a93a8;
+}
