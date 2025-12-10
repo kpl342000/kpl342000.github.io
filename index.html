@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>기획자 김필립 | 홈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">Game Designer <span>Philip Kim</span></div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="career.html">경력 기술서</a>
+        <a href="portfolio.html">포트폴리오</a>
+        <a href="about.html">자기소개서</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-tag">언리얼 엔진 5 · 전투/시스템 기획</div>
+          <h1 class="hero-title">
+            MMORPG 전투와<br />
+            시스템 구조를 설계하는<br />
+            <span>기획자 김필립</span>입니다.
+          </h1>
+          <p class="hero-subtitle">
+            언리얼 엔진 5 기반 MMORPG 프로젝트에서 전투 및 시스템 기획을 담당하며<br />
+            클래스 스킬, 상태이상, 어그로, 자동 전투, 탈것·비행 시스템 등<br />
+            핵심 전투 구조를 설계하고 구현까지 함께 고민해 왔습니다.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-top">
+            <!-- 프로필 사진 -->
+            <img
+              src="img/profile.jpg"
+              alt="기획자 김필립 프로필 사진"
+              class="hero-avatar"
+            />
+            <div>
+              <div class="hero-card-title">Profile</div>
+              <div class="hero-card-name">기획자 김필립</div>
+            </div>
+          </div>
+        
+          <div class="hero-meta">
+            <div>
+              <span class="label">분야</span>
+              전투/시스템 기획
+            </div>
+            <div>
+              <span class="label">엔진</span>
+              Unreal Engine 5, Unity
+            </div>
+            <div>
+              <span class="label">강점</span>
+              전투 구조 설계, 디버깅
+            </div>
+            <div>
+              <span class="label">협업</span>
+              애니/VFX/사운드/클라/서버
+            </div>
+          </div>
+          <div class="hero-highlight">
+            개발 초기부터 참여해 전투 시스템 파이프라인을 구축하고,<br />
+            지속적인 자기계발로 엔진 전반을 다루는 기획자로 성장했습니다.
+          </div>
+        </aside>
+        
+      </section>
+
+      <section>
+        <h2 class="section-title">입장할 페이지를 선택해 주세요.</h2>
+        <p class="section-subtitle">
+          상세한 경력 소개, 실제 작업물이 담긴 포트폴리오, 자기소개 내용을 각각 분리하여 정리했습니다.
+        </p>
+
+        <div class="button-grid">
+
+          <!-- 경력 기술서 / career -->
+          <a href="career.html" class="nav-card" style="background-image: url('img/career.jpg');">
+            <div class="nav-card-title">Career</div>
+            <div class="nav-card-subtitle">
+              참여했던 프로젝트들의 과정과 결과물을 정리한<br />
+              경력 기술서입니다.
+            </div>
+            <div class="nav-card-tag">Project</div>
+          </a>
+        
+          <!-- 포트폴리오 / portfolio -->
+          <a href="portfolio.html" class="nav-card" style="background-image: url('img/portfolio.jpg');">
+            <div class="nav-card-title">portfolio</div>
+            <div class="nav-card-subtitle">
+              개인적인 학습과 노력으로 제작한 영상 및<br />
+              이미지 작업물입니다.
+            </div>
+            <div class="nav-card-tag">Portfolio</div>
+          </a>
+        
+          <!-- 자기소개 / About Me -->
+          <a href="about.html" class="nav-card" style="background-image: url('img/about.jpg');">
+            <div class="nav-card-title">About Me</div>
+            <div class="nav-card-subtitle">
+              업무 경력, 보유 기술, 그리고 제가 추구하는 가치에<br />
+              대한 설명입니다.
+            </div>
+            <div class="nav-card-tag">Information</div>
+          </a>
+        
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Philip Kim. All rights reserved.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // 연도 자동 표기
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
