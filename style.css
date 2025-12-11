@@ -1,0 +1,211 @@
+/* 전체 레이아웃 */
+body {
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+  background: #0a0f1c;
+  color: #fff;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #d0d4ff;
+  font-size: 16px;
+}
+
+nav .active {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 히어로 영역 */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.hero-title span {
+  color: #3ec9ff;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* 프로필 카드 */
+.hero-card {
+  width: 420px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 20px 25px 30px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-avatar {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-card-title {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.hero-card-name {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.hero-meta {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.label {
+  display: inline-block;
+  width: 50px;
+  opacity: 0.6;
+}
+
+.hero-highlight {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* --- KEY CONTENTS --- */
+
+.key-contents {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.key-contents h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.key-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 카드 하나 */
+.key-card {
+  position: relative;
+  width: 350px;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.key-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 아래 그라데이션 영역 */
+.key-card-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+/* 텍스트 박스 */
+.key-card-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  z-index: 2;
+  text-align: left;
+}
+
+.key-card-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.key-card-desc {
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* 버튼 */
+.key-card-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: white;
+  color: #111;
+  font-weight: 700;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.key-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  margin-top: 120px;
+  padding-bottom: 50px;
+  opacity: 0.5;
+  font-size: 14px;
+}
