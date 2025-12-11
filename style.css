@@ -1,0 +1,708 @@
+/* ================================
+   GLOBAL
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html, body {
+  background: #050609;
+  color: #e6e9f2;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================================
+   LAYOUT
+================================ */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+header nav a {
+  margin-left: 28px;
+  font-size: 15px;
+  opacity: 0.75;
+  transition: 0.2s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+  opacity: 1;
+  color: #c5d4ff;
+}
+
+/* 공통 제목 */
+
+.page-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  opacity: 0.78;
+  margin-bottom: 32px;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #12141b;
+  color: #c5d4ff;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+/* 카드 / 섹션 공통 */
+
+.card {
+  background: #101219;
+  border-radius: 18px;
+  padding: 24px 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.section-block {
+  background: #0c0f16;
+  border-radius: 18px;
+  padding: 28px 26px;
+  margin-bottom: 28px;
+}
+
+/* ================================
+   INDEX : HERO
+================================ */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+  gap: 40px;
+  align-items: stretch;
+  margin-bottom: 60px;
+}
+
+.hero-tag {
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.hero-title span {
+  color: #c5d4ff;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* 프로필 카드 */
+
+.hero-profile {
+  background: radial-gradient(circle at top left, #191d26 0, #0b0d12 52%, #050609 100%);
+  border-radius: 24px;
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-profile-top {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.hero-profile-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-profile-main {
+  flex: 1;
+}
+
+.hero-profile-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hero-profile-role {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.hero-profile-meta {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  font-size: 12px;
+}
+
+.hero-profile-meta .label {
+  display: block;
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.hero-profile-highlight {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ================================
+   INDEX : KEY CONTENTS
+================================ */
+
+.key-contents {
+  margin-top: 10px;
+}
+
+.key-contents h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.key-contents p {
+  font-size: 14px;
+  opacity: 0.78;
+  margin-bottom: 26px;
+}
+
+.key-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.key-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #12151f;
+  min-height: 360px;
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.key-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7);
+}
+
+.key-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+.key-card-image {
+  position: absolute;
+  inset: 0;
+}
+
+.key-card-gradient {
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(to bottom, rgba(5, 6, 9, 0) 0%, rgba(5, 6, 9, 0.96) 65%, #050609 100%);
+}
+
+.key-card-inner {
+  position: relative;
+  height: 100%;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.key-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.key-card-desc {
+  font-size: 13px;
+  opacity: 0.88;
+  margin-bottom: 18px;
+}
+
+.key-card-tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 14px;
+}
+
+.key-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #f2f4ff;
+  color: #050609;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ================================
+   CAREER PAGE
+================================ */
+
+.career-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.career-summary ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  font-size: 14px;
+  opacity: 0.88;
+}
+
+.career-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.career-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #171a22;
+  font-size: 11px;
+  opacity: 0.88;
+}
+
+/* 큰 블록 */
+
+.career-block {
+  margin-bottom: 32px;
+}
+
+.career-block-header {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 22px;
+  margin-bottom: 18px;
+}
+
+.career-block-header img {
+  border-radius: 18px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.career-block-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.career-block-meta {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.career-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.career-columns h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.career-columns ul {
+  font-size: 14px;
+  padding-left: 18px;
+}
+
+/* RC 프로젝트 이미지 두 장 */
+
+.career-rc-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.career-rc-images img {
+  border-radius: 16px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* ================================
+   PORTFOLIO PAGE
+================================ */
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.portfolio-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 22px;
+  align-items: stretch;
+  background: #0c0f16;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.portfolio-item img {
+  border-radius: 14px;
+  object-fit: cover;
+  height: 220px;
+}
+
+.portfolio-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.portfolio-item-meta {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.portfolio-item-desc {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.portfolio-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #171a22;
+  font-size: 11px;
+}
+
+.portfolio-link {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f2f4ff;
+  color: #050609;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================================
+   ABOUT PAGE
+================================ */
+
+.about-hero {
+  margin-bottom: 28px;
+}
+
+.about-name {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.about-role {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.about-tagline {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 24px;
+}
+
+.about-left,
+.about-right {
+  background: #0c0f16;
+  border-radius: 18px;
+  padding: 22px 22px;
+}
+
+/* 왼쪽 : 프로필 + 자기소개 요약 */
+
+.about-profile-top {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.about-profile-top img {
+  border-radius: 18px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.about-profile-summary-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.about-profile-summary-role {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.about-contact {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.about-contact-row {
+  display: flex;
+  gap: 10px;
+}
+
+.about-contact-row span:first-child {
+  width: 70px;
+  opacity: 0.7;
+}
+
+.about-left p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* 오른쪽 : 스킬 */
+
+.about-skills-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.skill-item {
+  margin-bottom: 16px;
+}
+
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.skill-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: #171a22;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: var(--percent, 0%);
+  background: #8f9dff;
+}
+
+.skill-caption {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* ABOUT – 역량 섹션 */
+
+.about-section {
+  margin-top: 28px;
+  background: #0c0f16;
+  border-radius: 18px;
+  padding: 22px 22px;
+}
+
+.about-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-evidence-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.about-evidence-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.about-evidence-images img {
+  border-radius: 10px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* ABOUT – 자기소개 본문 */
+
+.about-selfintro {
+  margin-top: 26px;
+}
+
+.about-selfintro h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+.about-selfintro p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  header nav a {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-profile {
+    order: -1;
+  }
+
+  .key-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .career-block-header {
+    grid-template-columns: 1fr;
+  }
+
+  .career-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .career-rc-images {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+}
