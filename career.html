@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>경력 기술서 | 김필립</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">Game Designer <span>Philip Kim</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="career.html" class="active">경력 기술서</a>
+      <a href="portfolio.html">포트폴리오</a>
+      <a href="about.html">자기소개서</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <main>
+    <section class="page-header">
+      <h1 class="page-title">경력 기술서</h1>
+      <p class="page-subtitle">
+        UE5 기반 MMORPG 프로젝트에서 전투·시스템 전반을 설계하고<br />
+        구현까지 함께 고민해 온 경험을 정리했습니다.
+      </p>
+    </section>
+
+    <!-- 전투 기획 -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">전투 기획</h2>
+        <p class="section-caption">클래스·보스·몬스터 전투 구조 설계 및 데이터 구축</p>
+      </div>
+      <div class="section-body two-columns">
+        <ul class="section-list">
+          <li>4개 메인 클래스(나이트/위자드/아처/어쎄신) 스킬 기획 및 데이터 작업</li>
+          <li>기본 상태 애니메이션 연출 및 애님 몽타주 세팅</li>
+          <li>보스 몬스터 패턴 기획 및 State Machine 기반 패턴 구현</li>
+          <li>보스·몬스터용 스킬 사거리, 대미지, 대미지 타입, 스탯 설계</li>
+          <li>대륙 및 던전 몬스터 레벨 배치, 외형·캡슐·네임플레이트 데이터 작업</li>
+        </ul>
+        <ul class="section-list">
+          <li>도발, 암흑, 반사 대미지, 대미지 감소, 배리어 등 상태이상 시스템 설계</li>
+          <li>상태이상 중첩·갱신 로직 및 은신/석화 등 제어형 상태 설계</li>
+          <li>추가 사거리, 상태이상 대상 추가 능력, 상태이상 시간 증감 등 스탯 설계</li>
+          <li>자동 전투/스킬 예약/오토 액티브 스킬 등 전투 자동화 시스템 기획</li>
+          <li>무기별 몽타주 분기, 다중 액션 시스템 등 전투 표현 확장</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 어그로 & 오토 시스템 -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">어그로 · 자동 전투 시스템</h2>
+        <p class="section-caption">전투 흐름과 몬스터 타겟팅을 제어하는 핵심 로직 설계</p>
+      </div>
+      <div class="section-body two-columns">
+        <ul class="section-list">
+          <li>대미지/힐/스킬 사용을 포함한 어그로 공식 및 점수 구조 기획</li>
+          <li>어그로 초기화, 낮은 HP 우선, 거리 기반, 타겟 고수 등 어그로 커맨드 설계</li>
+          <li>스킬 카테고리별 자동 전투 조건(바디 점유, 사용 조건 등) 기획</li>
+        </ul>
+        <ul class="section-list">
+          <li>스킬 예약 큐 시스템 기획(1종 예약, 예약 변경, UI 연동)</li>
+          <li>쿨타임과 별도 동작하는 스킬 사용 주기 설정 시스템 설계</li>
+          <li>조건부(상태이상/패시브) 스킬·커맨드 자동 발동 시스템 설계</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 시스템 기획 -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">시스템 기획</h2>
+        <p class="section-caption">탈것, 비행, 채팅, 오프라인 플레이 등 공용 시스템</p>
+      </div>
+      <div class="section-body two-columns">
+        <ul class="section-list">
+          <li>탈것 소환/보유/장착/컬렉션/합성 구조 및 UI 기획</li>
+          <li>탈것 탑승 상태에서의 캐릭터 상태·행동 정의 및 탈것 스탯 시스템 설계</li>
+          <li>비행 탈것 콘셉트 및 공중 이동/전투, Z축 제약, 존 이탈 처리 기획</li>
+          <li>장판 액터 구조(상태이상·스킬 연동, 액터/스포너 기반 스탯 처리) 기획</li>
+        </ul>
+        <ul class="section-list">
+          <li>채팅 시스템 서버 전파 범위(일반, 귓속말, 월드, 서버, 파티, 길드 등) 기획</li>
+          <li>레벨 제한·소모 재화 등 채팅 제약 설정 및 공용 변수 테이블 설계</li>
+          <li>오프라인 플레이 시스템(로그아웃 시 AI 조작, State Machine 기반 행동 정의)</li>
+          <li>환경 설정/자원에 따른 오프라인 플레이 동작·종료 로직 및 UI 기획</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- UE5 & 연출 협업 -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">언리얼 엔진 5 · 전투 연출 협업</h2>
+        <p class="section-caption">BP·애님 몽타주·나이아가라·사운드를 활용한 구현 협업</p>
+      </div>
+      <div class="section-body two-columns">
+        <ul class="section-list">
+          <li>애니메이션 블루프린트 기반 캐릭터 상태 구현 및 슬롯/블렌딩 설계</li>
+          <li>애님 몽타주 구성 및 애님 노티파이를 이용한 이펙트·사운드·히트 타이밍 처리</li>
+          <li>카메라 쉐이크, 정지 프레임 등 타격감 강화 연출 기획 및 구현 협업</li>
+          <li>스킬별 히트 이펙트 분기, 방향·거리·시간 기반 히트백 시스템 기획</li>
+        </ul>
+        <ul class="section-list">
+          <li>나이아가라 시스템 사용자 파라미터 연동, 이펙트 타입·품질 프리셋 기반 최적화</li>
+          <li>사운드 클래스/메타 사운드를 활용한 볼륨·Pitch 제어 및 환경별 믹싱 구조 기획</li>
+          <li>BP 및 Visual Studio 디버깅을 통한 이슈 재현·원인 분석 후 담당 파트와 공유</li>
+          <li>전투 퀄리티 향상을 위한 기획·연출·구현 파트 간 조율 및 커뮤니케이션 담당</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Philip Kim. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
